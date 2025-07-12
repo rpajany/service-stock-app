@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+  /* max-width: 1280px; */
+  max-width: 100%;
+  margin-left: 80px;
+  padding-top: 80px;
+  padding-right: 16px;
+  padding-top: 80px;
+}
+
+footer {
+  bottom: 0 !important;
+  z-index: 40;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .tbl_salesItem {
+    width: 100%;
+    /* Ensures the table spans only the printable width */
+    border-collapse: collapse;
+    /* Removes gaps between table cells */
+  }
+
+  .table_div {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  th,
+  td {
+    font-size: 8pt; /* Reduce font size for better fitting */
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+   
+    /* Limits main content to A4 width */
+  }
+
+  .header,
+  .footer,
+  .sidebar {
+    display: none;
+  }
+}

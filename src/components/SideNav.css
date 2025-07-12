@@ -1,0 +1,51 @@
+.sidenav {
+    width: 60px;
+    transition: width 0.3s ease;
+    background-color: #333;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sidenav.expanded {
+    width: 200px;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav ul li {
+    display: flex;
+    align-items: center;
+    padding: 5px; 
+ margin-left: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidenav ul li .icon {
+    margin-right: 16px;
+    font-size: 24px;
+}
+
+.nav-text {
+    font-size: 16px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.sidenav ul li:hover {
+    background-color: #575757;
+}
+
+.sidenav ul li .nav-text {
+    display: inline-block;
+    opacity: 0;
+}
+
+.sidenav.expanded ul li .nav-text {
+    opacity: 1;
+}

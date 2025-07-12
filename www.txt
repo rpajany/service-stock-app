@@ -1,0 +1,200 @@
+npx create-react-app service-stock-app
+npm i react-router-dom@6
+
+https://tailwindcss.com/docs/installation
+
+https://nerdcave.com/tailwind-cheat-sheet
+https://www.creative-tim.com/twcomponents/cheatsheet
+npm install -D tailwindcss
+npx tailwindcss init
+
+https://flowbite.com/ -> free Tailwind components
+https://flowbite.com/tools/tailwind-cheat-sheet/
+npm install flowbite
+
+https://react-icons.github.io/react-icons/
+npm install react-icons --save
+
+https://icons.getbootstrap.com/ -> icon 
+npm i bootstrap-icons
+
+ https://www.npmjs.com/package/react-toastify
+ https://fkhadra.github.io/react-toastify/introduction/
+ https://deadsimplechat.com/blog/react-toastify-the-complete-guide/
+npm i react-toastify@10.0.4
+
+npm i file-saver@2.0.5
+npm i xlsx@0.18.5
+npm i react-table@7.8.0
+
+npm i simple-datatables@9.1.0
+
+npm install react-redux@8
+npm install @reduxjs/toolkit
+
+https://flowbite.com/docs/plugins/datatables/
+https://react-data-table-component.netlify.app/?path=/docs/examples-filtering--docs
+
+npm install react-data-table-component styled-components
+
+npm install xlsx 
+npm install file-saver
+
+https://www.npmjs.com/package/sweetalert2-react-content
+https://github.com/sweetalert2/sweetalert2-react-content
+ npm install --save sweetalert2 sweetalert2-react-content
+
+
+https://www.npmjs.com/package/react-search-autocomplete
+
+
+Add row to table:
+https://codesandbox.io/p/sandbox/3vk7jxv69p?file=%2Fsrc%2Findex.js
+
+billig App websites:-
+https://codesandbox.io/p/github/delat22/invoice-generator/master?file=%2Fsrc%2Fcomponents%2FInvoiceForm.jsx
+https://github.com/delat22/invoice-generator/tree/master
+
+https://github.com/panshak/accountill
+https://github.com/panshak/accountill?tab=readme-ov-file#introduction
+
+Building and generate Invoice PDF system with React.js, Redux, and Node.js:-
+https://blog.stackademic.com/generate-invoice-pdf-with-node-js-and-react-js-af821bc7f82d
+
+Redux Vs Context-API:-
+https://medium.com/@tanyas022000/redux-vs-context-api-45e5bae61df2
+
+
+
+npm i to-words@3.3.0
+npm i js-cookie
+
+https://www.npmjs.com/package/react-date-range
+https://hypeserver.github.io/react-date-range/
+
+npm install react-date-range
+
+chart:-
+https://flowbite.com/docs/plugins/charts/#javascript-behaviour
+
+npm install apexcharts --save
+npm install react-apexcharts apexcharts
+
+plugins: [
+  require('flowbite/plugin')({
+      charts: true,
+  }),
+  // ... other plugins
+]
+
+https://chatgpt.com/share/674aa930-7704-8007-bece-1bf577fd8210
+
+npm install cross-env --save-dev -> use ip while App open during start
+
+ "scripts": {
+    "start": "cross-env HOST=192.168.1.10 react-scripts start",
+ }
+
+
+npm install react-loader-spinner --save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+github:-
+--------------
+
+…or create a new repository on the command line
+echo "# service-stock-app" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rpajany/service-stock-app.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/rpajany/service-stock-app.git
+git branch -M main
+git push -u origin main
+
+
+--------------------------------------------------------
+import React, { useState } from 'react';
+import { DataTableVIew, SalesAutoComplete, DatePicker2 } from '../components';
+
+export const Quotation = () => {
+    const [activeTab, setActiveTab] = useState(1);
+    return (
+        <>Quotation
+
+            <div className="w-full mx-auto p-1">
+                {/* Tab navigation */}
+                <ul className="flex space-x-4 border-b-2 border-gray-200">
+                    <li className={`cursor-pointer p-2 ${activeTab === 1 ? 'text-blue-600 border-blue-600 border-b-2  bg-green-200 rounded-t-lg px-2' : ''}`}
+                        onClick={() => setActiveTab(1)}>
+                        View Sales
+                    </li>
+                    <li className={`cursor-pointer p-2 ${activeTab === 2 ? 'text-blue-600 border-blue-600 border-b-2 bg-green-200 rounded-t-lg px-2' : ''}`}
+                        onClick={() => setActiveTab(2)}>
+                        Sales Bill
+                    </li>
+                </ul>
+
+                {/* Tab content */}
+                <div className="mt-4">
+                    {activeTab === 1 && (
+                        <div className="p-4 bg-green-300 rounded-lg">
+                            {/*  Content for Tab 1  */}
+                            {/* <DataTableVIew tbl_title={'Sales List'} columns={columns} apiData={apiData} /> */}
+                        </div>
+                    )}
+                    {activeTab === 2 && (
+                        <div className="p-4 bg-green-300 rounded-lg">
+                            {/*  Content for Tab 2  */}
+                            <p>Sales Entry</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+        </>
+    )
+}
+------------------------------------------------------------------
+ 
